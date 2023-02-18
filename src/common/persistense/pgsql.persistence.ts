@@ -18,8 +18,10 @@ export class PgSqlPool {
   public createPgSqlPool(): Pool {
     return new Pool({
       max: 20,
-      connectionString: `postgress://${this.dbUser}:${this.dbPass}@${this.dbServer}:${this.dbPort}/${this.dbPass}`,
+      connectionString: `postgres://useradmin:admin@localhost/emociondb`,
       idleTimeoutMillis: 3000,
     });
   }
 }
+
+// connectionString: `postgress://${this.dbUser}:${this.dbPass}@${this.dbServer}:${this.dbPort}/${this.dbPass}`,
